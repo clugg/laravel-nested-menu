@@ -28,7 +28,7 @@ class MenuItemController extends Controller
     {
         $data = $this->validate($request, [
             'label' => 'string',
-            'parent_id' => ['integer', 'exists:'.MenuItem::class.',id'],
+            'parent_id' => ['integer', 'exists:'.MenuItem::class.',id', 'nullable'],
         ]);
 
         return MenuItem::create($data);
