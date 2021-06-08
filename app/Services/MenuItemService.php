@@ -56,7 +56,7 @@ class MenuItemService
                 ++$importedItems;
             }
 
-            // insert children
+            // import children
             if (!empty($children)) {
                 $importedItems += $this->import($children, $currentItem->id);
             }
